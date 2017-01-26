@@ -1,0 +1,10 @@
+rails g scaffold list name:string
+rails db:migrate
+rails g scaffold task name:string done:boolean list:references
+# adiciona default: false na migration
+rails db:migrate
+# adiciona associations
+# cria seeds.rb
+rails db:seed
+rails g controller welcome index
+# alterar routes.rb para root apontar para welcome#index
